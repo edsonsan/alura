@@ -13,7 +13,7 @@ public class PrincipalComBusca {
         System.out.println("Digite um filme para busca: ");
         var busca = leitura.nextLine();
 
-        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=coloque_sua_apikey";
+        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=6585022c";
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
