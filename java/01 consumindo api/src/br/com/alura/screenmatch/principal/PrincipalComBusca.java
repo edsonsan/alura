@@ -36,8 +36,16 @@ public class PrincipalComBusca {
 //        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
         TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
         System.out.println(meuTituloOmdb);
-        Titulo meuTitulo = new Titulo(meuTituloOmdb);
-        System.out.println("-".repeat(30));
-        System.out.println(meuTitulo);
+
+        try {
+            Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("-".repeat(30));
+            System.out.println(meuTitulo);
+        }catch (NumberFormatException e){
+            System.out.println("Erro inesperado, MSG: "+e.getMessage());
+        }
+
+        System.out.println("Fim do processo.");
+
     }
 }
